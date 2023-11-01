@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #fff;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    /* perspective: 800px; */
+    /* background-color: #dc7643"; */
+}
+
+#nav {
+    height: 59px;
+    width: 100%;
+    /* background-color: rgb(196, 148, 148); */
+    /* opacity: 0.6; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    padding: 0px 272px;
+    margin: 2px;
+    z-index: 99;
+    border-radius: 76px;
+}
+
+#cursor {
+    height: 15px;
+    width: 15px;
+    background-color: rgb(235, 227, 14);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+
+#cursor-blur {
+    height: 400px;
+    width: 400px;
+    background-color: rgb(216, 212, 80, 0.4);
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(40px);
+    z-index: 9;
+}
+
+#nav img {
+    height: 90px;
+}
+
+#nav h4 {
+    padding: 15px;
+    margin: 27px;
+    color: rgb(244, 239, 239);
+}
+
+video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+#main {
+    position: relative;
+    background-color: rgb(0, 0, 0, 0.50);
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    /* background-color: burlywood; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+#page1 h1 {
+    font-size: 120px;
+    font-weight: 700;
+    position: relative;
+}
+
+#page1 h1::before {
+    content: "तन्मना भोजनगत: चित्त:|";
+    position: absolute;
+    color: #000;
+    top: -6px;
+    left: -6px;
+    -webkit-text-stroke: 2px #95c01ded;
+    z-index: -1;
+}
+
+#page1 h2 {
+    font-size: 30px;
+    font-weight: 1100;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#page1 p {
+    font-size: 18px;
+    font-weight: 200;
+    width: 68%;
+    padding-top: 8px;
+}
+
+#page2 {
+    height: 200vh;
+    width: 100%;
+    z-index: 10;
+}
+
+/* #scroller{
+    white-space: nowrap;
+    overflow-x: auto ;
+    overflow-y: hidden ;
+} */
+
+#scroller {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+#scroller::-webkit-scrollbar-track {
+    display: none;
+}
+
+#scroller h4:hover {
+    color: rgb(183, 219, 25);
+}
+
+#scroller h4 {
+    display: inline-block;
+    font-size: 110px;
+    font-weight: 900;
+    font-family: gilroy;
+    margin-right: 10px;
+    color: transparent;
+    transition: all linear 0.5s;
+    -webkit-text-stroke: 2px #fffcfc;
+    color: rgb(0, 0, 0);
+}
+
+.scroller_1 {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#about-us {
+    margin-top: 180px;
+    height: 40vh;
+    width: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    padding: 0 50px;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    z-index: 10;
+}
+
+#about-us img {
+    height: 250px;
+    width: 250px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+#about-us-in {
+    width: 50%;
+    text-align: center;
+}
+
+#about-us-in h3 {
+    font-size: 54px;
+    font-weight: 600;
+    margin-bottom: 40px;
+
+}
+
+#about-us-in p {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+#card-container {
+    margin-top: 150px;
+    /* background-color: burlywood; */
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 70;
+    position: relative;
+    z-index: 10;
+}
+
+.card {
+    height: 80%;
+    width: 20%;
+    /* background-color: #a73131; */
+    border-radius: 20px;
+
+}
+
+#card-1 {
+    background-image: url(./assets/img_dish.jpg);
+    height: 80%;
+    width: 20%;
+    border-radius: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#card-2 {
+    background-image: url(./assets/img_spices.jpg);
+    height: 80%;
+    width: 20%;
+    border-radius: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#card-3 {
+    background-image: url(./assets/img_poolav.jpg);
+    height: 80%;
+    width: 20%;
+    border-radius: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #95c11e;
+    padding: 3px;
+    padding-top: 40px;
+    opacity: 0;
+    transition: all ease 0.6s;
+    border-radius: 25px;
+}
+
+.overlay h4 {
+    color: #000;
+    font-size: 35px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.overlay p {
+    color: #000;
+    font-size: 14px;
+    line-height: 15px;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-weight: 300;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: rotate3d(-1, 1, 0, 20deg);
+}
+
+#footer {
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to left bottom, #91b89c 0%, #bceb47 80%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6.5vw;
+    padding: 0 100px;
+}
+
+#footer>img {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    z-index: 0;
+}
+
+#f1 img {
+    height: 240px;
+}
+
+#f1,
+#f2,
+#f3,
+#f4 {
+    width: fit-content;
+    position: relative;
+    z-index: 99;
+    /* background-color: red; */
+}
+
+#f2 h3 {
+    font-size: 1.6vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+#f3 h3 {
+    font-size: 1.6vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+#f4 h4 {
+    font-size: 1vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 700;
+    line-height: 25px;
+    margin-bottom: 8px;
+    justify-content: end;
+}
